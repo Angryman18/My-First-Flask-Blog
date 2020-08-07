@@ -1,0 +1,53 @@
+{% extends "admin/layout2.html" %}
+{% block content %}
+  <body class="d-flex flex-column h-100">
+      <div class="container">
+        <a href="/add_post"><button class="btn btn-outline-info">Add Post</button></a>
+        <hr>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Sl No.</th>
+            <th scope="col">Post Title</th>
+            <th scope="col">Post Date</th>
+            <th scope="col">Manage</th>
+          </tr>
+        </thead>
+        {% for post in posts %}
+        <tbody>
+          <tr>
+            <td><b>{{ post.sno }}</b></td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.date }}</td>
+            <td colspan="2">
+                <a href="/edit/{{ post.sno }}"><button class="btn btn-outline-primary btn-sm">Edit</button></a>
+                <a href="/admin_panel/delete/{{ post.sno }}"><button class="btn btn-outline-danger btn-sm">Delete</button></a>
+
+                <!-- Button trigger modal 
+<button type="button" href="/admin_panel/delete/{{ post.sno }}" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">Delete</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sure Delete this Post?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/admin_panel/delete/{{ post.sno }}"><button type="button" class="btn btn-primary">Confirm</button></a>
+      </div>
+    </div>
+  </div>
+</div>-->
+            </td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+    </div>
+</body>
+{% endblock content %}

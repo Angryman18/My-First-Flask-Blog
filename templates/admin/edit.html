@@ -1,0 +1,26 @@
+{% extends "admin/layout2.html" %}
+{% block content %}
+<form method="post" action="/edit/{{slno}}"> 
+<div class="container">
+    <label for='Title'>Title:</label>
+<input type="text" class="form-control" name="title" required value="{{edit.title}}"><br/>
+
+<label for='posted_by'>Posted by:</label>
+<input type="text" class="form-control" name="posted_by" required value="{{edit.posted_by}}"><br/>
+
+<label for='Description'>Description:</label>
+<textarea class="form-control" name="content" required rows="12">{{ edit.content }}</textarea><br/>
+
+<label for='img_name'>Slugs:</label>
+<input type="text" class="form-control" required name="slug" disabled value="{{edit.slug}}"><br/>
+
+<label for='Date'>Post Date:</label>
+<input type="text" class="form-control" disabled value="{{ post_date }}"><br/>
+
+<label for='img_name'>Image Name:</label>
+<input type="text" class="form-control" name="img_name" value="{{edit.img_name}}"><br/>
+
+<input type="submit" class="btn btn-outline-info" name="submit" placeholder="Submit">
+</div>
+</form>
+{% endblock %}

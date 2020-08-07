@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+
+        input[type=password], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+
+        input[type=email], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type=number], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 40px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #008000;
+        }
+        
+        .containers {
+          border-radius: 5px;
+          padding: 20px;
+          margin-left: 250px;
+          margin-right: 250px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="containers"><center><h3><b>Database Connector</b></h3></center></div>
+        
+        <div class="containers">
+          <form action="/database" name='MesageSent' method="POST">
+            <label for="user">Database User:</label>
+            <input type="text" id="user" name="dbuser" placeholder="Database User">
+        
+            <label for="Password">Password</label>
+            <input type="password" id="password" name="dbpassword" placeholder="Database Password">
+
+            <label for="Host_IP">Host IP</label>
+            <input type="text" id="hostip" name="hostip" placeholder="Host IP">
+            
+            <label for="dbname">Database Name</label>
+            <input type="text" id="dbname" name="dbname" placeholder="Database Name">
+        
+        
+            <input type="submit" name='submit' value="Submit">
+          </form>
+        </div>
+</body>
+</html>
+{% endblock content %}

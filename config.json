@@ -1,0 +1,17 @@
+{
+
+    "params":
+    {
+        "local_server": "True",
+        "local_url": "mysql+pymysql://root:@localhost/bootstrap_blog",
+        "prod_url": "mysql+pymysql://root:password@localip/database_name",
+        "fb_url": "https://www.facebook.com",
+        "tw_url": "https://www.twitter.com",
+        "lk_url": "https://www.linkedin.com",
+        "yt_url": "https://www.youtube.com",
+        "site": "Coding Blog",
+        "email_ID": "yourmail@gmail.com",
+        "email_password": "yourmail_password",
+    }
+
+}
